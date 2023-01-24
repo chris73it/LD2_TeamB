@@ -461,6 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6733292447473554638}
+  - component: {fileID: 5831324533521623036}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -485,3 +486,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5831324533521623036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9126347844577687925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a577f582298be84b8df9a50353a8853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv: {fileID: 11400000, guid: ff186b703035ec54bb128a03d0e4448c, type: 2}
+  barracks: {fileID: 11400000, guid: 7ea12a47724e744449393d8480cbed13, type: 2}
+  coins: 0
