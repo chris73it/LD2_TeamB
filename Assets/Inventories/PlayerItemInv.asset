@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111544435617a984699d86082f71d5c2, type: 3}
   m_Name: PlayerItemInv
   m_EditorClassIdentifier: 
+  items: []

@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ItemInventory", order = 1)]
 public class Items : ScriptableObject
 {
+    [SerializeField]
     List<Item> items;
 
     public void addItem(Item newItem)
