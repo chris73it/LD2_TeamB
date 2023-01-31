@@ -7,12 +7,12 @@ public class Items : ScriptableObject
 {
     List<Item> items;
 
-    void addItem(Item newItem)
+    public void addItem(Item newItem)
     {
         items.Add(newItem);
     }
 
-    void removeItem(Item remItem)
+    public void removeItem(Item remItem)
     {
         items.Remove(remItem);
     }

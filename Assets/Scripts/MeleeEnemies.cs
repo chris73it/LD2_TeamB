@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeEnemies : MonoBehaviour
 {
     public GameObject player;
-    // public Character stat;
+    public Character stat;
     public float distanceBetween;
     public float distance;
     public bool isBoss = false;

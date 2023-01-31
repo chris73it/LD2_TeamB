@@ -7,12 +7,12 @@ public class Troops : ScriptableObject
 {
     List<Troop> troops;
 
-    void addTroop(Troop newTroop)
+    public void addTroop(Troop newTroop)
     {
         troops.Add(newTroop);
     }
 
-    void removeTroop(Troop remTroop)
+    public void removeTroop(Troop remTroop)
     {
         troops.Remove(remTroop);
     }

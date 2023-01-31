@@ -500,4 +500,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inv: {fileID: 11400000, guid: ff186b703035ec54bb128a03d0e4448c, type: 2}
   barracks: {fileID: 11400000, guid: 7ea12a47724e744449393d8480cbed13, type: 2}
-  coins: 0
+  coins: {fileID: 11400000, guid: 96e485ef94fa02546a887596cda12b45, type: 2}

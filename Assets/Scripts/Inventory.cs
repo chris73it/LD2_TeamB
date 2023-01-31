@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField]
-    Items inv;
-
-    [SerializeField]
-    Troops barracks;
-
-    public int coins;
+    public Items inv;
+    public Troops barracks;
+    public Coins coins;
 
     void Start()
     {
-        coins = 0;
+        coins.Set(0);
     }
 }

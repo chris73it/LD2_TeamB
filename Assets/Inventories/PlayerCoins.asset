@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88995432f0255a247b9d582a0efbf269, type: 3}
-  m_Name: ShopToopInv
+  m_Script: {fileID: 11500000, guid: 38f5954fc9d9dab42ab96caeb1257972, type: 3}
+  m_Name: PlayerCoins
   m_EditorClassIdentifier: 
