@@ -25,13 +25,13 @@ public class MeleeEnemies : MonoBehaviour
         direction.Normalize();
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; ;
 
-        if (distance < distanceBetween)
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, (stat.speed + speedMutation) * Time.deltaTime);
-        }
-        else if (distance > distanceBetween + 5 && !isBoss)
-        {
-            Destroy(this.gameObject);
-        }
+        //if (distance < distanceBetween)
+        //{
+        //    transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, (stat.speed + speedMutation) * Time.deltaTime);
+        //}
+        //else if (distance > distanceBetween + 5 && !isBoss)
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
 }
