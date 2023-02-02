@@ -258,6 +258,9 @@ GameObject:
   - component: {fileID: 6468794047178897726}
   - component: {fileID: 6753023575275377281}
   - component: {fileID: 78552292320780643}
+  - component: {fileID: 7979502785966697534}
+  - component: {fileID: 16710411763291133}
+  - component: {fileID: 8142524451777491549}
   m_Layer: 0
   m_Name: Prince
   m_TagString: Untagged
@@ -328,6 +331,54 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7979502785966697534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037667042340064863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025bc1462a0eae54f8cdc55cb41d676d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isdead: 0
+  leftMouse: 0
+  rightMouse: 0
+  pause: 0
+  horizontal: 0
+  vertical: 0
+--- !u!114 &16710411763291133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037667042340064863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55bbd933a65184591bc67b7a3fb784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  health: 5
+  Type: 0
+--- !u!114 &8142524451777491549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037667042340064863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1786de3a452acd14c9423d236d468005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 7979502785966697534}
+  player: {fileID: 16710411763291133}
 --- !u!1 &6281919236602843050
 GameObject:
   m_ObjectHideFlags: 0
