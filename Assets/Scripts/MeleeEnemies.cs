@@ -13,7 +13,7 @@ public class MeleeEnemies : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         speedMutation = Random.Range(-1, 3);
     }
     void Update()

@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6037667042340064863, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6733292447473554638, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -326,6 +330,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 662431670900620963, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3222331751719906654, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
       propertyPath: distance
       value: 0
