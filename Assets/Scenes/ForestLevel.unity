@@ -332,7 +332,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 662431670900620963, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
       propertyPath: speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3222331751719906654, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
       propertyPath: distance
@@ -524,7 +524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &1763143882
 CanvasRenderer:
   m_ObjectHideFlags: 0
