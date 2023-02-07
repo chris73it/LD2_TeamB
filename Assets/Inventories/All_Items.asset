@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88995432f0255a247b9d582a0efbf269, type: 3}
-  m_Name: PlayerTroopInv
+  m_Script: {fileID: 11500000, guid: 111544435617a984699d86082f71d5c2, type: 3}
+  m_Name: All_Items
   m_EditorClassIdentifier: 
-  troops: []
+  items:
+  - {fileID: 7688587685184654915, guid: a1a2bc7e5898ea047896c3836b10d3ae, type: 3}

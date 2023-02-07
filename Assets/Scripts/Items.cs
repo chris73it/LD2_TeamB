@@ -17,4 +17,9 @@ public class Items : ScriptableObject
     {
         items.Remove(remItem);
     }
+
+    public Item GetRandom()
+    {
+        return items[Random.Range(0, items.Count)];
+    }
 }
