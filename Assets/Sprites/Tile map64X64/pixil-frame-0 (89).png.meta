@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 94c9955a2f020d449a4e7ec401f339b6
-=======
-guid: 6c9bcc819f9850d4bb8ce174cbd9378b
->>>>>>> parent of 1699317 (Revert "Please don't break")
+guid: b1a4d61ecea497e4b993b567345e7cf6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
