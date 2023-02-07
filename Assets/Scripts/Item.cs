@@ -20,6 +20,11 @@ public class Item : MonoBehaviour
         return cost;
     }
 
+    public Sprite getSprite()
+    {
+        return sprite;
+    }
+
     //what the item does
 
 }

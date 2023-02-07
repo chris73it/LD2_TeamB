@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/CoinPouch", order = 3)]
 public class Coins : ScriptableObject
 {
+    [SerializeField]
     private int coins;
 
     public void Add(int amount)

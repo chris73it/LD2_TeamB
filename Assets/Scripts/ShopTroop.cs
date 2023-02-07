@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ShopItem : MonoBehaviour
+public class ShopTroop : MonoBehaviour
 {
     [SerializeField]
     Image image;
@@ -12,14 +12,13 @@ public class ShopItem : MonoBehaviour
     [SerializeField]
     TMP_Text text;
 
-    public Item item;
+    public Troop troop;
 
     private void Start()
     {
-        image.sprite = item.getSprite();
-        text.text = "" + item.getCost();
+        image.sprite = troop.getSprite();
+        text.text = "" + troop.getCost();
     }
-
     public void Reset()
     {
         this.GetComponent<Button>().interactable = true;
