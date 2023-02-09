@@ -45,4 +45,22 @@ public class Character : MonoBehaviour
         }
         //healthBar.SetHealth(currentHealth);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //Debug.Log("Collided with: " + other.name);
+        if (other.tag == "projectile")
+        {
+            //if (other.GetComponent<Projectile>().exclude != this.gameObject.name)
+            //{
+            //    TakeDamage(other.GetComponent<Projectile>().damage);
+            //}
+        }
+        if (other.tag == "melee")
+        {
+            if (other.GetComponent<Melee>().exclude != this.gameObject.name)
+            {
+                TakeDamage(other.GetComponent<Melee>().damage);
+            }
+        }
+    }
 }

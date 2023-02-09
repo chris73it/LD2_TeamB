@@ -26,19 +26,19 @@ public class Melee : MonoBehaviour
         exclude = excludeName;
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    if (lifeTime < maxLife + 1)
-    //    {
-    //        lifeTime += Time.deltaTime;
-    //    }
+    
+    void Update()
+    {
+        if (lifeTime < maxLife + 1)
+        {
+            lifeTime += Time.deltaTime;
+        }
 
-    //    if (lifeTime > maxLife)
-    //    {
-    //        disable();
-    //    }
-    //}
+        if (lifeTime > maxLife)
+        {
+           //disable();
+        }
+    }
 
     //public void enable()
     //{
@@ -59,16 +59,16 @@ public class Melee : MonoBehaviour
     //        anim.SetBool("Chomp Time", false);
     //    }
     //}
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.name != exclude)
-    //    {
-    //        if (other.GetComponent<Character>())
-    //        {
-    //            if (other.GetComponent<Character>().type != Character.CharacterType.Object)
-    //            {
-    //                //Debug.Log("Melee attack connected");
-    //                Rigidbody2D rb2d = other.GetComponent<Rigidbody2D>();
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name != exclude)
+        {
+            if (other.GetComponent<Character>())
+            {
+                if (other.GetComponent<Character>().Type != Character.CharacterType.Object)
+                {
+                    Debug.Log("Melee attack connected");
+                    Rigidbody2D rb2d = other.GetComponent<Rigidbody2D>();
     //                if (rb2d != null)
     //                {
 
@@ -80,8 +80,8 @@ public class Melee : MonoBehaviour
     //                        rb2d.AddForce(dir * knockback, ForceMode2D.Impulse);
     //                    }
     //                }
-    //            }
-    //        }
-    //    }
-    //}
+                }
+            }
+        }
+    }
 }
