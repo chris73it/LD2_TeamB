@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 3
-  sprite: {fileID: 21300000, guid: c44a1c79ae679cd4b8a68be18ec8d62e, type: 3}
+  sprite: {fileID: 21300000, guid: 391adb466960c604f9e2321c77725d1e, type: 3}
 --- !u!1 &2070045847171269367
 GameObject:
   m_ObjectHideFlags: 0
