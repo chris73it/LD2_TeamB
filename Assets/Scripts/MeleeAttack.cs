@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class MeleeAttack : MonoBehaviour
 {
     public MeleeEnemies chase;
     public Melee melee;

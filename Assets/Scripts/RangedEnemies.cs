@@ -4,67 +4,32 @@ using UnityEngine;
 
 public class RangedEnemies : MonoBehaviour
 {
-    public RangedWeapons activeItem;
-    public GameObject projectilePrefab;
+    public GameObject player;
+    public Character stat;
+    public float distanceBetween;
+    public float distance;
 
-    public Transform weaponTransform, gunTip;
+    private float speedMutation;
 
-    float timeSinceActive, reloadTime, reloadDelay;
-    bool reloading;
-
-    void Shoot(RangedWeapons shootThis)
+    void Start()
     {
-        timeSinceActive = 0;
-        shootThis.setClip(shootThis.clipCurrent - shootThis.bulletCount);
-
-        for (int i = 0; i < shootThis.bulletCount; i++)
-        {
-            Vector3 dir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - gunTip.position).normalized;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            float spread = Random.Range(-shootThis.bulletSpread, shootThis.bulletSpread);
-
-            Quaternion projectileRotation = Quaternion.Euler(new Vector3(0, 0, angle + spread));
-
-            GameObject projectile = (GameObject)GameObject.Instantiate(projectilePrefab, gunTip.position, projectileRotation);
-            projectile.GetComponent<Projectile>().Setup(shootThis.damage, shootThis.bulletSpeed, shootThis.speedFallOff, shootThis.projectileSprite, this.gameObject.name, this.gameObject.layer);
-            // Debug.Log(this.gameObject);
-        }
-        //muzzleFlash.intensity = 2.5f;
-        //Cam.Shake((transform.position - gunTip.position).normalized, 1.5f, 0.05f); //call camera shake for recoil
+        player = GameObject.FindWithTag("Player");
+        speedMutation = Random.Range(-1, 3);
     }
-    void Reload()
+    void Update()
     {
-        //reloadScript.reloading = reloading;
-        //if (input.reload && activeItem != null && !reloading)
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; ;
+
+        if (distance < distanceBetween)
         {
-            if (activeItem.clipCurrent < activeItem.clipSize)
-            {
-                reloadTime = 0;
-                reloading = true;
-            }
+            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, (stat.speed + speedMutation) * Time.deltaTime);
         }
-        if (reloading)
+        else if (distance > distanceBetween + 5)
         {
-            reloadDelay = activeItem.reloadTime;
-            if (activeItem.clipCurrent > 0) reloadDelay -= 0.5f;
-            reloadTime += Time.deltaTime;
-
-            //reloadSlider.maxValue = reloadDelay;
-            //reloadSlider.value = reloadTime;
-
-            if (reloadTime > reloadDelay)
-            {
-                if (activeItem.clipCurrent > 0)
-                {
-                    activeItem.setClip(activeItem.clipSize + activeItem.bulletCount);
-                }
-                else
-                {
-                    activeItem.setClip(activeItem.clipSize);
-                }
-                reloading = false;
-                //reloadSlider.value = 0;
-            }
+            Destroy(this.gameObject);
         }
     }
 }

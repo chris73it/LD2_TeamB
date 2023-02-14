@@ -128,9 +128,9 @@ GameObject:
   - component: {fileID: 9131012801657054226}
   - component: {fileID: 3222331751719906654}
   - component: {fileID: 662431670900620963}
-  - component: {fileID: 815589829477600473}
   - component: {fileID: 7909207082515926363}
   - component: {fileID: 3551010455171782831}
+  - component: {fileID: 209004889819547284}
   m_Layer: 0
   m_Name: meleeEnemy
   m_TagString: Untagged
@@ -184,27 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   currentHealth: 0
-  maxHealth: 0
+  maxHealth: 10
   Type: 1
---- !u!114 &815589829477600473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8609894439624831742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d7aa56cda3d4849a7acafe4c661211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chase: {fileID: 3222331751719906654}
-  melee: {fileID: 8126680064333640753}
-  damage: 2
-  attackRate: 1.25
-  weapon: {fileID: 4054559821125644219}
-  player: {fileID: 0}
-  weaponTransform: {fileID: 1399505713419048805}
 --- !u!50 &7909207082515926363
 Rigidbody2D:
   serializedVersion: 4
@@ -252,6 +233,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &209004889819547284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609894439624831742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d7aa56cda3d4849a7acafe4c661211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chase: {fileID: 3222331751719906654}
+  melee: {fileID: 8126680064333640753}
+  damage: 1
+  attackRate: 1.25
+  weapon: {fileID: 4054559821125644219}
+  player: {fileID: 0}
+  weaponTransform: {fileID: 1399505713419048805}
 --- !u!1001 &1445361443203291388
 PrefabInstance:
   m_ObjectHideFlags: 0
