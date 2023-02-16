@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f5954fc9d9dab42ab96caeb1257972, type: 3}
   m_Name: PlayerCoins
   m_EditorClassIdentifier: 
+  coins: 0
