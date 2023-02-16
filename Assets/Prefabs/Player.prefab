@@ -235,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 099fd744bb3961b458700b2b9cc6b86b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 7979502785966697534}
   - component: {fileID: 16710411763291133}
   - component: {fileID: 8142524451777491549}
+  - component: {fileID: 4505459768931854118}
   m_Layer: 0
   m_Name: Prince
   m_TagString: Player
@@ -365,6 +366,7 @@ MonoBehaviour:
   speed: 1
   currentHealth: 0
   maxHealth: 10
+  healthBar: {fileID: 0}
   Type: 0
 --- !u!114 &8142524451777491549
 MonoBehaviour:
@@ -380,6 +382,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 7979502785966697534}
   player: {fileID: 16710411763291133}
+--- !u!114 &4505459768931854118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037667042340064863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab94870b84546d4194111833ee3d230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Death: {fileID: 0}
 --- !u!1 &6281919236602843050
 GameObject:
   m_ObjectHideFlags: 0
