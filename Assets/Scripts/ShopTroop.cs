@@ -21,6 +21,8 @@ public class ShopTroop : MonoBehaviour
     }
     public void Reset()
     {
+        image.sprite = troop.getSprite();
+        text.text = "" + troop.getCost();
         this.GetComponent<Button>().interactable = true;
     }
 }

@@ -13,4 +13,15 @@ MonoBehaviour:
   m_Name: All_Troops
   m_EditorClassIdentifier: 
   troops:
-  - {fileID: 81402100084826174, guid: ced2dcb35d22411499dc25cb899ae0c6, type: 3}
+  - {fileID: 81402100084826174, guid: a4c34a0fd452edf40905c469b703d19a, type: 3}
+  - {fileID: 81402100084826174, guid: b79d6f23435f8b247ae2efc8852c458b, type: 3}
+  - {fileID: 81402100084826174, guid: 1ba054757b0c21944b63c6649ea8fbe0, type: 3}
+  - {fileID: 81402100084826174, guid: 84c40a73fa7261c468744c391e56c2c5, type: 3}
+  - {fileID: 81402100084826174, guid: 9784e8309ec6cba44a01be3ee7c016dc, type: 3}
+  - {fileID: 81402100084826174, guid: 421ba31b0ca4cb64d8bc9bee7abe3ae9, type: 3}
+  - {fileID: 81402100084826174, guid: ab19ca8c7bff1e843bc3d7ae1d3bbd65, type: 3}
+  - {fileID: 81402100084826174, guid: 3d653be6221694d43af367713d70d117, type: 3}
+  - {fileID: 81402100084826174, guid: e00632477fbea2d47aa57312750bdd26, type: 3}
+  - {fileID: 81402100084826174, guid: 9c693a04174019d47b5d5f20824767ca, type: 3}
+  - {fileID: 81402100084826174, guid: 81abb9cd338f39d409ad28fddf100344, type: 3}
+  - {fileID: 81402100084826174, guid: 4b8251456d3b49c4e83814ae4137b4a6, type: 3}

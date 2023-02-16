@@ -22,6 +22,8 @@ public class ShopItem : MonoBehaviour
 
     public void Reset()
     {
+        image.sprite = item.getSprite();
+        text.text = "" + item.getCost();
         this.GetComponent<Button>().interactable = true;
     }
 }

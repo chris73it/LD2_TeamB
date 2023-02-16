@@ -43,6 +43,10 @@ public class Shop : MonoBehaviour
             troop1.Reset();
             troop2.Reset();
             troop3.Reset();
+
+            updateText();
+
+            Debug.Log("Shop Shuffled! -1 coins");
         }
         else
         {
