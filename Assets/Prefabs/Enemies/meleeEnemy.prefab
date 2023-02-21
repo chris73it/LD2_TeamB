@@ -185,6 +185,7 @@ MonoBehaviour:
   speed: 5
   currentHealth: 0
   maxHealth: 10
+  healthBar: {fileID: 0}
   Type: 1
 --- !u!50 &7909207082515926363
 Rigidbody2D:
@@ -271,6 +272,10 @@ PrefabInstance:
     - target: {fileID: 3191438326555899719, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_Name
       value: Melee
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191438326555899719, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
+      propertyPath: m_TagString
+      value: melee
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_RootOrder

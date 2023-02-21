@@ -7,19 +7,38 @@ public class RangedAttack : MonoBehaviour
     public RangedWeapons activeItem;
     public GameObject projectilePrefab;
 
-    public Transform weaponTransform, gunTip;
+    public Transform weaponTransform, gunTip, target;
 
     float timeSinceActive, reloadTime, reloadDelay;
     bool reloading;
+    public bool canShoot;
 
-    void Shoot(RangedWeapons shootThis)
+    public void setTarget(Transform what)
+    {
+        target = what;
+    }
+
+    private void Update()
+    {
+        Reload();
+        timeSinceActive += Time.deltaTime;
+
+        if (canShoot && timeSinceActive >= activeItem.useRate)
+        {
+            Shoot(activeItem);
+        }
+    }
+
+    public void Shoot(RangedWeapons shootThis)
     {
         timeSinceActive = 0;
+
         shootThis.setClip(shootThis.clipCurrent - shootThis.bulletCount);
 
         for (int i = 0; i < shootThis.bulletCount; i++)
         {
-            Vector3 dir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - gunTip.position).normalized;
+            Vector3 dir = (target.position - gunTip.position).normalized;
+
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             float spread = Random.Range(-shootThis.bulletSpread, shootThis.bulletSpread);
 
@@ -36,13 +55,13 @@ public class RangedAttack : MonoBehaviour
     {
         //reloadScript.reloading = reloading;
         //if (input.reload && activeItem != null && !reloading)
+        //{
+        if (activeItem.clipCurrent < activeItem.clipSize)
         {
-            if (activeItem.clipCurrent < activeItem.clipSize)
-            {
-                reloadTime = 0;
-                reloading = true;
-            }
+            reloadTime = 0;
+            reloading = true;
         }
+        //}
         if (reloading)
         {
             reloadDelay = activeItem.reloadTime;

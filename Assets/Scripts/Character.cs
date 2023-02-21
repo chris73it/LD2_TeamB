@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
         {
             currentHealth = 0;
         }
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
 
     }
     public void Heal(int health)
@@ -43,7 +43,7 @@ public class Character : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
     }
     void OnTriggerEnter2D(Collider2D other)
     {

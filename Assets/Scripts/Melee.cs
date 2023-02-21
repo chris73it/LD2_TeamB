@@ -40,25 +40,25 @@ public class Melee : MonoBehaviour
         }
     }
 
-    //public void enable()
-    //{
-    //    lifeTime = 0;
-    //    col.enabled = true;
+    public void enable()
+    {
+        lifeTime = 0;
+        col.enabled = true;
     //    sprite.enabled = true;
     //    if (anim.enabled)
     //    {
     //        anim.SetBool("Chomp Time", true);
     //    }
-    //}
-    //public void disable()
-    //{
-    //    col.enabled = false;
-    //    sprite.enabled = false;
+    }
+    public void disable()
+    {
+        col.enabled = false;
+        sprite.enabled = false;
     //    if (anim.enabled)
     //    {
     //        anim.SetBool("Chomp Time", false);
     //    }
-    //}
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name != exclude)

@@ -6,6 +6,7 @@ public class RangedEnemies : MonoBehaviour
 {
     public GameObject player;
     public Character stat;
+    public RangedAttack Bow;
     public float distanceBetween;
     public float distance;
 
@@ -14,22 +15,30 @@ public class RangedEnemies : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        speedMutation = Random.Range(-1, 3);
+        speedMutation = Random.Range(-1, 1);
+
+        Bow.setTarget(player.transform);
     }
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; ;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (distance < distanceBetween)
+        
+        if (distance > distanceBetween)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, (stat.speed + speedMutation) * Time.deltaTime);
+            Bow.canShoot = false;
         }
-        else if (distance > distanceBetween + 5)
+        
+        else
         {
-            Destroy(this.gameObject);
+            transform.position = Vector2.MoveTowards(this.transform.position, this.transform.position, (stat.speed + speedMutation) * Time.deltaTime);
+            //Destroy(this.gameObject);
+            Bow.canShoot = true;
         }
+        
     }
 }
