@@ -44,12 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06a213d9c6e6a74480f4f97b1d3ba13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyList:
-  - {fileID: 8609894439624831742, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
-  - {fileID: 7216867924536993577, guid: d37f39c830d289e489a0d357eef168ca, type: 3}
-  spawnRangeXMin: 0
-  spawnRangeXMax: 0
-  spawnRangeYMin: 0
-  spawnRangeYMax: 0
-  numToSpawnPerInterval: 5
-  SpawnCd: 5
+  enemies:
+  - enemyPrefab: {fileID: 8609894439624831742, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
+    cost: 1
+  - enemyPrefab: {fileID: 7216867924536993577, guid: d37f39c830d289e489a0d357eef168ca, type: 3}
+    cost: 2
+  currWave: 1
+  enemiesToSpawn: []
+  spawnLocation: []
+  spawnIndex: 0
+  waveDuration: 0
+  spawnedEnemies: []
