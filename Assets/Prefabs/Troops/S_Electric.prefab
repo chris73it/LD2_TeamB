@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81402100084826175}
   - component: {fileID: 81402100084826174}
+  - component: {fileID: -831482955188121073}
   m_Layer: 0
   m_Name: S_Electric
   m_TagString: Untagged
@@ -47,6 +48,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 3
   sprite: {fileID: 21300000, guid: a11ec7cb507a22743982ca6e121b8a25, type: 3}
+--- !u!114 &-831482955188121073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81402100084826173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55bbd933a65184591bc67b7a3fb784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  currentHealth: 0
+  maxHealth: 7
+  healthBar: {fileID: 0}
+  Type: 3
 --- !u!1 &2070045847171269367
 GameObject:
   m_ObjectHideFlags: 0

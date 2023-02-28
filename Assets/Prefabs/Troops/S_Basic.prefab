@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 81402100084826175}
   - component: {fileID: 81402100084826174}
+  - component: {fileID: -4370834095401308299}
+  - component: {fileID: 6575689153748761059}
   m_Layer: 0
   m_Name: S_Basic
   m_TagString: Untagged
@@ -47,6 +49,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 3
   sprite: {fileID: 21300000, guid: 396923ffd5e917b469c01a0a5799fed0, type: 3}
+--- !u!114 &-4370834095401308299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81402100084826173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55bbd933a65184591bc67b7a3fb784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  currentHealth: 0
+  maxHealth: 8
+  healthBar: {fileID: 0}
+  Type: 3
+--- !u!114 &6575689153748761059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81402100084826173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e313c8e2ae5d97847a6b9533f2cb15fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  rate: 0
+  exclude: 
+  col: {fileID: 0}
+  sprite: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1 &2070045847171269367
 GameObject:
   m_ObjectHideFlags: 0
