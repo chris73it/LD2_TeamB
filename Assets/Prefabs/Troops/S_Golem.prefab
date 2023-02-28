@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 81402100084826175}
   - component: {fileID: 81402100084826174}
-  - component: {fileID: 980017057276954449}
+  - component: {fileID: -4370834095401308299}
+  - component: {fileID: 6575689153748761059}
   m_Layer: 0
-  m_Name: S_Bowman
+  m_Name: S_Golem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 3
-  sprite: {fileID: 21300000, guid: 96c9f809b3784e84fb2ab2ba9f03f58f, type: 3}
---- !u!114 &980017057276954449
+  sprite: {fileID: 21300000, guid: 396923ffd5e917b469c01a0a5799fed0, type: 3}
+--- !u!114 &-4370834095401308299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,9 +63,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   currentHealth: 0
-  maxHealth: 6
+  maxHealth: 8
   healthBar: {fileID: 0}
   Type: 3
+--- !u!114 &6575689153748761059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81402100084826173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e313c8e2ae5d97847a6b9533f2cb15fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  rate: 0
+  exclude: 
+  col: {fileID: 0}
+  sprite: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1 &2070045847171269367
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96c9f809b3784e84fb2ab2ba9f03f58f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43e7a2fa86b9fa34896b0223b20b7863, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
