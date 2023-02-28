@@ -18,13 +18,10 @@ public class Spawner : MonoBehaviour
     private float spawnTimer;
 
     public List<GameObject> spawnedEnemies = new List<GameObject>();
-    // Start is called before the first frame update
     void Start()
     {
         GenerateWave();
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (spawnTimer <= 0)
@@ -66,7 +63,7 @@ public class Spawner : MonoBehaviour
 
     public void GenerateWave()
     {
-        waveValue = currWave * 10;
+        waveValue = currWave;
         GenerateEnemies();
 
         spawnInterval = waveDuration / enemiesToSpawn.Count; // gives a fixed time between each enemies

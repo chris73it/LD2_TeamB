@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-2881921690536870307
 MonoBehaviour:
@@ -49,9 +49,9 @@ MonoBehaviour:
     cost: 1
   - enemyPrefab: {fileID: 7216867924536993577, guid: d37f39c830d289e489a0d357eef168ca, type: 3}
     cost: 2
-  currWave: 1
+  currWave: 10
   enemiesToSpawn: []
   spawnLocation: []
   spawnIndex: 0
-  waveDuration: 0
+  waveDuration: 20
   spawnedEnemies: []
