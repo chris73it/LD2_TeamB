@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeItem: {fileID: 11400000, guid: 5d72999e492833648932e0b7dc0cd282, type: 2}
-  projectilePrefab: {fileID: 2743284458218944140, guid: cebd89891917f0c46b215b75bb3c0075, type: 3}
+  projectilePrefab: {fileID: 2743284458218944140, guid: f2f7a0f083867074dbcf7963fc52ebe7, type: 3}
   weaponTransform: {fileID: 2122967390606340853}
   gunTip: {fileID: 5054311027703602731}
   target: {fileID: 0}
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 7388591605754567109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.00000031292, z: 0}
-  m_LocalScale: {x: 0.31057, y: 0.31057, z: 0.31057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5876395920172553874}
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 27bc799fd58b6264191b0530dbe192e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84f4159046a23bd458bfa6296da92137, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
