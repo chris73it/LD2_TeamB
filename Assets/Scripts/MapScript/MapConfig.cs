@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObject/MapConfig")]
+[CreateAssetMenu(menuName = "ScriptableObjects/MapConfig")]
 public class MapConfig : ScriptableObject
 {
 
