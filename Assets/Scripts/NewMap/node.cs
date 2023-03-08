@@ -2,20 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class node : ScriptableObject
+[CreateAssetMenu(menuName = "ScriptableObjects/node")]
+public class Node : ScriptableObject
 {
-    public string Name;
-    public enum nodeType { Battle, EliteBattle, Interaction, Reward, Boss}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<GameObject> nodes;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    public bool IsCompleted;
+
+
 }
