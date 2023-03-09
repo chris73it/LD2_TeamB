@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfa6d5de32da1c49a85779b2ef2c530, type: 3}
+  m_Name: Fairy
+  m_EditorClassIdentifier: 
+  clipCurrent: 0
+  clipSize: 3
+  bulletCount: 1
+  bulletSpread: 2
+  bulletSpeed: 15
+  speedFallOff: 0
+  projectileSprite: {fileID: 21300000, guid: a66fe5336220c5443b08756a3425f897, type: 3}
+  useRate: 1
+  reloadTime: 2
+  damage: 5

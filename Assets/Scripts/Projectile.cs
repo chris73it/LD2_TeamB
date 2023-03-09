@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name != exclude)
+        if (other.tag != exclude)
         {
             Destroy(this.gameObject);
         }
