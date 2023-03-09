@@ -7,7 +7,7 @@ public class RangedEnemies : MonoBehaviour
     public GameObject player;
     public Character stat;
     public RangedAttack Bow;
-    public float distanceBetween;
+    public float range;
     public float distance;
 
     private float speedMutation;
@@ -27,7 +27,7 @@ public class RangedEnemies : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         
-        if (distance > distanceBetween)
+        if (distance > range)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, (stat.speed + speedMutation) * Time.deltaTime);
             Bow.canShoot = false;

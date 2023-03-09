@@ -45,7 +45,7 @@ public class RangedAttack : MonoBehaviour
             Quaternion projectileRotation = Quaternion.Euler(new Vector3(0, 0, angle + spread));
 
             GameObject projectile = (GameObject)GameObject.Instantiate(projectilePrefab, gunTip.position, projectileRotation);
-            projectile.GetComponent<Projectile>().Setup(shootThis.damage, shootThis.bulletSpeed, shootThis.speedFallOff, shootThis.projectileSprite, this.gameObject.name, this.gameObject.layer);
+            projectile.GetComponent<Projectile>().Setup(shootThis.damage, shootThis.bulletSpeed, shootThis.speedFallOff, shootThis.projectileSprite, this.gameObject.tag, this.gameObject.layer);
             // Debug.Log(this.gameObject);
         }
         //muzzleFlash.intensity = 2.5f;
