@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
         }
         if (!isdead)
         {
-            pause = Input.GetKey(KeyCode.Escape);
+            pause = Input.GetKeyDown(KeyCode.Escape);
         }
     }
 }
