@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2479293836105868883}
-  - component: {fileID: -2881921690536870307}
+  - component: {fileID: 1362231488209085847}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2881921690536870307
+--- !u!114 &1362231488209085847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,14 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06a213d9c6e6a74480f4f97b1d3ba13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - enemyPrefab: {fileID: 8609894439624831742, guid: 4bb7281465565b840816539c39fd50ee, type: 3}
-    cost: 1
-  - enemyPrefab: {fileID: 7216867924536993577, guid: d37f39c830d289e489a0d357eef168ca, type: 3}
-    cost: 2
-  currWave: 10
-  enemiesToSpawn: []
-  spawnLocation: []
-  spawnIndex: 0
-  waveDuration: 20
-  spawnedEnemies: []
+  spawnRangeXMin: 0
+  spawnRangeXMax: 0
+  spawnRangeYMin: 0
+  spawnRangeYMax: 0
+  animator: {fileID: 0}
+  waveName: {fileID: 0}

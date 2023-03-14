@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public bool enabled = true;
+    //public bool enabled = true;
     public bool isdead = false;
 
     public bool leftMouse, rightMouse, pause;
