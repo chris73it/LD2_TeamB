@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2385876157294524980}
   - component: {fileID: 6305565637447514219}
   m_Layer: 0
-  m_Name: rangedEnemyTemplate
+  m_Name: TemplateRangedEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
