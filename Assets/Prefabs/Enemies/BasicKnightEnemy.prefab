@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: e55a3847d9b662e4a86a449d4a853cbb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 228afdc9da9fea04b9e819a360e36b56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.15, y: 2.5}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3551010455171782831}
   - component: {fileID: 209004889819547284}
   m_Layer: 0
-  m_Name: Human_Knight
+  m_Name: BasicKnightEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,19 +283,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.029
+      value: -1.13
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: 0.175
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.07925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7202593
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -307,7 +307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.69370496
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -319,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7352889274605105359, guid: cd1218de1d22be44c93d508552b4589a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 87.848
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
