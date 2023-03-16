@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/ForestLevel.unity
+    guid: 60a829432f180cf4db5b9029c548603f
+  - enabled: 1
+    path: Assets/Scenes/InteractionLevel.unity
+    guid: 8c36534af60dc744387a58d5b25222a9
+  - enabled: 1
+    path: Assets/Scenes/RewardLevel.unity
+    guid: 1649e44857599454fac75cbb2fc4a6c6
+  - enabled: 1
+    path: Assets/Scenes/EliteForestLevel.unity
+    guid: 837e597561b0953479e8b247c2788e11
+  - enabled: 1
+    path: Assets/Scenes/BossLevel.unity
+    guid: b8e8db9e8d02b484faf4080a3538c78c
   m_configObjects: {}
