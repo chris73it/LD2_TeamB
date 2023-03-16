@@ -20,5 +20,5 @@ MonoBehaviour:
   speedFallOff: 0
   projectileSprite: {fileID: 21300000, guid: 78b96863e03741a4892638503ffdc1f8, type: 3}
   useRate: 1
-  reloadTime: 2
+  reloadTime: 3
   damage: 5
