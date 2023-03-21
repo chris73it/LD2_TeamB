@@ -31,23 +31,26 @@ public class TroopAI : MonoBehaviour
             }
             sortByDistance(enemies);
 
-            target = enemies[0].transform;
-            Bow.setTarget(target.transform);
-
-            distance = Vector2.Distance(transform.position, target.position);
-            Vector2 direction = target.transform.position - transform.position;
-            direction.Normalize();
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-
-            if (distance > range)
+            if (enemies != null)
             {
-                Bow.canShoot = false;
-            }
+                target = enemies[0].transform;
+                Bow.setTarget(target.transform);
 
-            else
-            {
-                Bow.canShoot = true;
+                distance = Vector2.Distance(transform.position, target.position);
+                Vector2 direction = target.transform.position - transform.position;
+                direction.Normalize();
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+
+                if (distance > range)
+                {
+                    Bow.canShoot = false;
+                }
+
+                else
+                {
+                    Bow.canShoot = true;
+                }
             }
         }
     }
