@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06a213d9c6e6a74480f4f97b1d3ba13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRangeXMin: 0
-  spawnRangeXMax: 0
-  spawnRangeYMin: 0
-  spawnRangeYMax: 0
+  corners: []
+  waves: []
   animator: {fileID: 0}
   waveName: {fileID: 0}

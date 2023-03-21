@@ -28,10 +28,12 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Debug.Log(this.name + "is taking " + damage + " damage!");
         currentHealth -= damage;
         if (currentHealth < 0)
         {
             currentHealth = 0;
+            Die();
         }
         //healthBar.SetHealth(currentHealth);
 
@@ -45,16 +47,31 @@ public class Character : MonoBehaviour
         }
         //healthBar.SetHealth(currentHealth);
     }
+
+    void Die()
+    {
+        if (Type == CharacterType.Player)
+        {
+            //handle player death
+        }
+        else
+        {
+            //death animation
+            Destroy(this.gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("Collided with: " + other.name);
-        if (other.tag == "projectile")
+        /*if (other.tag == "projectile")
         {
-            //if (other.GetComponent<Projectile>().exclude != this.gameObject.name)
-            //{
-            //    TakeDamage(other.GetComponent<Projectile>().damage);
-            //}
-        }
+            Debug.Log("hit!");
+            if (other.GetComponent<Projectile>().exclude != this.gameObject.tag)
+            {
+                TakeDamage(other.GetComponent<Projectile>().damage);
+            }
+        }*/
         if (other.tag == "melee")
         {
             if (other.GetComponent<Melee>().exclude != this.gameObject.name)

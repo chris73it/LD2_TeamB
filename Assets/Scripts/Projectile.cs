@@ -42,6 +42,10 @@ public class Projectile : MonoBehaviour
     {
         if (other.tag != exclude)
         {
+            if (other.GetComponent<Character>())
+            {
+                other.GetComponent<Character>().TakeDamage(damage);
+            }
             Destroy(this.gameObject);
         }
     }
