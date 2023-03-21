@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ForestLevel.unity
     guid: 60a829432f180cf4db5b9029c548603f
   - enabled: 1
-    path: Assets/Scenes/InteractionLevel.unity
+    path: Assets/Scenes/InterLevel_AppleTree.unity
     guid: 8c36534af60dc744387a58d5b25222a9
   - enabled: 1
     path: Assets/Scenes/RewardLevel.unity

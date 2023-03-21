@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UI_Controller : MonoBehaviour
 {
-
     public int Level;
     public GameObject canvas;
+
+    int[] integers = new int[] { 3, 4 };
 
     public void StartGame()
     {
@@ -29,5 +30,13 @@ public class UI_Controller : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(Level);
+    }
+
+    public void InteractLevel()
+    {
+        int randIndex = Random.Range(0, integers.Length);
+        int randValue = integers[randIndex];
+
+        SceneManager.LoadScene(randValue);
     }
 }
