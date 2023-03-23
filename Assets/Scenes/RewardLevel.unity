@@ -325,8 +325,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4284153735
+  m_fontColor: {r: 0.52943885, g: 1, b: 0.3537736, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c757846910f960245862b368ad0bcbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 5
+  Level: 0
   canvas: {fileID: 0}
 --- !u!114 &404046885
 MonoBehaviour:
@@ -494,7 +494,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404046884}
         m_TargetAssemblyTypeName: UI_Controller, Assembly-CSharp
-        m_MethodName: NextLevel
+        m_MethodName: EliteLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -648,8 +648,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 404046883}
   - {fileID: 55344037}
+  - {fileID: 404046883}
   - {fileID: 1367240000}
   - {fileID: 415381113}
   m_Father: {fileID: 1168934764}
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50dc440683375e54ca1ab4764fc2c68d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82f037bb949a81647a5861c87eff2f59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

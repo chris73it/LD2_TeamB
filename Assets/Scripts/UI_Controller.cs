@@ -8,7 +8,9 @@ public class UI_Controller : MonoBehaviour
     public int Level;
     public GameObject canvas;
 
-    int[] integers = new int[] { 3, 4 };
+    int[] Basic = new int[] { };
+    int[] Interact = new int[] { 3, 4, 5 };
+    int[] Elite = new int[] { 7, 8, 9 };
 
     public void StartGame()
     {
@@ -34,8 +36,15 @@ public class UI_Controller : MonoBehaviour
 
     public void InteractLevel()
     {
-        int randIndex = Random.Range(0, integers.Length);
-        int randValue = integers[randIndex];
+        int randIndex = Random.Range(0, Interact.Length);
+        int randValue = Interact[randIndex];
+
+        SceneManager.LoadScene(randValue);
+    }
+    public void EliteLevel()
+    {
+        int randIndex = Random.Range(0, Elite.Length);
+        int randValue = Elite[randIndex];
 
         SceneManager.LoadScene(randValue);
     }

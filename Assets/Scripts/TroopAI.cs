@@ -31,7 +31,7 @@ public class TroopAI : MonoBehaviour
             }
             sortByDistance(enemies);
 
-            if (enemies != null)
+            if (enemies != null && enemies.Length > 0)
             {
                 target = enemies[0].transform;
                 Bow.setTarget(target.transform);

@@ -18,11 +18,23 @@ EditorBuildSettings:
     path: Assets/Scenes/InterLevel_AppleTree.unity
     guid: 8c36534af60dc744387a58d5b25222a9
   - enabled: 1
+    path: Assets/Scenes/InterLevel_Cave.unity
+    guid: 9a843ffe6ae10dc4bb12c5c50ededd6b
+  - enabled: 1
+    path: Assets/Scenes/InterLevel_BombCity.unity
+    guid: 1ae7c4b3a5dca93499d6736eeaa127ea
+  - enabled: 1
     path: Assets/Scenes/RewardLevel.unity
     guid: 1649e44857599454fac75cbb2fc4a6c6
   - enabled: 1
     path: Assets/Scenes/EliteForestLevel.unity
     guid: 837e597561b0953479e8b247c2788e11
+  - enabled: 1
+    path: Assets/Scenes/Elite(alternative1).unity
+    guid: 554a2147b7d9f9b4a968d5f352e4ea9b
+  - enabled: 1
+    path: Assets/Scenes/Elite(alternative2).unity
+    guid: 8d647bffab348b5438d38f3aa77a9fcb
   - enabled: 1
     path: Assets/Scenes/BossLevel.unity
     guid: b8e8db9e8d02b484faf4080a3538c78c
