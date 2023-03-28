@@ -27,7 +27,7 @@ public class TroopAI : MonoBehaviour
             enemies = GameObject.FindGameObjectsWithTag("Enemy");
             if (enemies.Length == 0)
             {
-                Debug.Log("enemies.Length == 0");
+                //Debug.Log("enemies.Length == 0");
             }
             sortByDistance(enemies);
 

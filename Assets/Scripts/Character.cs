@@ -61,17 +61,18 @@ public class Character : MonoBehaviour
         }
     }
 
+    /*
     void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("Collided with: " + other.name);
-        /*if (other.tag == "projectile")
+        if (other.tag == "projectile")
         {
             Debug.Log("hit!");
             if (other.GetComponent<Projectile>().exclude != this.gameObject.tag)
             {
                 TakeDamage(other.GetComponent<Projectile>().damage);
             }
-        }*/
+        }
         if (other.tag == "melee")
         {
             if (other.GetComponent<Melee>().exclude != this.gameObject.name)
@@ -80,4 +81,5 @@ public class Character : MonoBehaviour
             }
         }
     }
+    */
 }

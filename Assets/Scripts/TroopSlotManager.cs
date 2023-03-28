@@ -42,7 +42,8 @@ public class TroopSlotManager : MonoBehaviour
 
         for (int i = 0; i < children.Count; i++)
         {
-            children[i].position = new Vector3 ((Mathf.Sin((45 * i) + angle) * offset) + transform.position.x, (Mathf.Cos((45 * i) + angle) * offset) + transform.position.y, 0);
+            float dyn_angle = 360 / children.Count;
+            children[i].position = new Vector3 ((Mathf.Sin((dyn_angle * i) + angle) * offset) + transform.position.x, (Mathf.Cos((dyn_angle * i) + angle) * offset) + transform.position.y, 0);
         }
     }
 }
