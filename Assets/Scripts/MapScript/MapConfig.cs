@@ -6,9 +6,9 @@ using UnityEngine;
 public class MapConfig : ScriptableObject
 {
 
-    public int NumOfStartNodes;
+    //public int NumOfStartNodes;
 
-    private int RewardNodes = 5;
+    //private int RewardNodes = 5;
 
 
 }

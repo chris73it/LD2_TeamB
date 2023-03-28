@@ -14,7 +14,6 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] corners;
     public Wave[] waves;
-    //public Transform[] spawnPoints;
     public Animator animator;
     public Text waveName;
     private Wave currentWave;
@@ -22,31 +21,38 @@ public class Spawner : MonoBehaviour
     private float nextSpawnTime;
     private bool canSpawn = true;
     private bool canAnimate = false;
+    private int waiter = 5;
+    private int count = 0;
 
     private void Start()
     {
-        StartCoroutine(SpawnWave());
+        Debug.Log("Started");
+        StartCoroutine(Waiter());
     }
 
     private void Update()
     {
-        currentWave = waves[currentWaveNumber];
-        GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        if (totalEnemies.Length == 0)
+        if (count == 5)
         {
-            if (currentWaveNumber + 1 != waves.Length)
+            currentWave = waves[currentWaveNumber];
+            SpawnWave();
+            GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            if (totalEnemies.Length == 0)
             {
-                if (canAnimate)
+                if (currentWaveNumber + 1 != waves.Length)
                 {
-                    waveName.text = waves[currentWaveNumber + 1].waveName;
-                    animator.SetTrigger("WaveComplete");
-                    canAnimate = false;
+                    if (canAnimate)
+                    {
+                        waveName.text = waves[currentWaveNumber + 1].waveName;
+                        animator.SetTrigger("WaveComplete");
+                        canAnimate = false;
+                    }
                 }
-            }
-            else
-            {
-                Debug.Log("GameFinish");
+                else
+                {
+                    Debug.Log("GameFinish");
+                }
             }
         }
     }
@@ -56,33 +62,41 @@ public class Spawner : MonoBehaviour
         currentWaveNumber++;
         canSpawn = true;
     }
-
-    private IEnumerator SpawnWave()
+    private IEnumerator Waiter()
     {
         yield return new WaitForSeconds(5f);
+        for (int i = 0; i < waiter; i++)
+        {
+            count++;
+        }
+    }
+    void SpawnWave()
+    {
+        
         if (!canSpawn || nextSpawnTime > Time.time)
         {
-            float playingFieldWidth = corners[1].transform.position.x - corners[0].transform.position.x;
-            float playingFieldHeight = corners[2].transform.position.y - corners[0].transform.position.y;
+            return;
+        }
+        Debug.Log("Continuing Forward");
+        float playingFieldWidth = corners[1].transform.position.x - corners[0].transform.position.x;
+        float playingFieldHeight = corners[2].transform.position.y - corners[0].transform.position.y;
 
-            for (int index = 0; index < currentWave.noOfEnemies; index++)
-            {
-                float randomWidth = Random.Range(0, playingFieldWidth);
-                float randomHeight = Random.Range(0, playingFieldHeight);
-                Vector3 enemyPosition = new Vector3(corners[0].transform.position.x + randomWidth, corners[0].transform.position.y + randomHeight, 0);
+        for (int index = 0; index < currentWave.noOfEnemies; index++)
+        {
+            float randomWidth = Random.Range(0, playingFieldWidth);
+            float randomHeight = Random.Range(0, playingFieldHeight);
+            Vector3 enemyPosition = new Vector3(corners[0].transform.position.x + randomWidth, corners[0].transform.position.y + randomHeight, 0);
 
-                int randomEnemyIndex = Random.Range(0, currentWave.typeOfEnemies.Length);
-                GameObject randomEnemy = currentWave.typeOfEnemies[randomEnemyIndex]; //choose the enemies
+            int randomEnemyIndex = Random.Range(0, currentWave.typeOfEnemies.Length);
+            GameObject randomEnemy = currentWave.typeOfEnemies[randomEnemyIndex]; //choose the enemies
 
-                Instantiate(randomEnemy, enemyPosition, Quaternion.identity); // Spawn enemy
-                currentWave.noOfEnemies--;
-                nextSpawnTime = Time.time + currentWave.spawnInterval;
-            }
-
-            canSpawn = false;
+            Instantiate(randomEnemy, enemyPosition, Quaternion.identity); // Spawn enemy
+            
+            nextSpawnTime = Time.time + currentWave.spawnInterval;
         }
 
-        
+        canSpawn = false;
+
     }
 
     //void SpawnWaveOld()
