@@ -6,8 +6,9 @@ public class TroopSlotManager : MonoBehaviour
 {
     [SerializeField]
     List<Transform> children;
-    float angle = 0;
+    float rotation_offset = 0;
     float offset = 1.6f;
+    int filledSlots = 0;
 
     public InputManager input;
 
@@ -33,17 +34,31 @@ public class TroopSlotManager : MonoBehaviour
     {
         if (input.horizontal != 0 || input.vertical != 0)
         {
-            angle += (Mathf.Abs(input.horizontal) + Mathf.Abs(input.vertical)) / 500;
+            rotation_offset += (Mathf.Abs(input.horizontal) + Mathf.Abs(input.vertical)) / 500;
         }
         else
         {
-            angle += Time.deltaTime * 1;
+            rotation_offset += Time.deltaTime * 1;
         }
-
+        
         for (int i = 0; i < children.Count; i++)
         {
-            float dyn_angle = 360 / children.Count;
-            children[i].position = new Vector3 ((Mathf.Sin((dyn_angle * i) + angle) * offset) + transform.position.x, (Mathf.Cos((dyn_angle * i) + angle) * offset) + transform.position.y, 0);
+
+            filledSlots = 0;
+            foreach (Transform c in children) {
+                if (c.childCount > 0)
+                {
+                    filledSlots++;
+                }
+            }
+
+            float angle = 45;//360 / filledSlots;
+            
+            Debug.Log(filledSlots + " rotating");
+
+            Vector3 polarPos = new Vector3(offset * (Mathf.Sin(angle * i)) + this.transform.position.x, offset * (Mathf.Cos(angle * i)) + this.transform.position.y, 0);
+            children[i].position = polarPos;
         }
+        
     }
 }
