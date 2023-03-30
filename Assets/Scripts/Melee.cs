@@ -67,7 +67,7 @@ public class Melee : MonoBehaviour
             {
                 if (other.GetComponent<Character>().Type != Character.CharacterType.Object)
                 {
-                    Debug.Log("Melee attack connected");
+                    //Debug.Log("Melee attack connected");
                     Rigidbody2D rb2d = other.GetComponent<Rigidbody2D>();
     //                if (rb2d != null)
     //                {

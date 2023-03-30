@@ -54,7 +54,7 @@ public class TroopSlotManager : MonoBehaviour
 
             float angle = 45;//360 / filledSlots;
             
-            Debug.Log(filledSlots + " rotating");
+            //Debug.Log(filledSlots + " rotating");
 
             Vector3 polarPos = new Vector3(offset * (Mathf.Sin(angle * i)) + this.transform.position.x, offset * (Mathf.Cos(angle * i)) + this.transform.position.y, 0);
             children[i].position = polarPos;

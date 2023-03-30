@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(this.name + "is taking " + damage + " damage!");
+        //Debug.Log(this.name + "is taking " + damage + " damage!");
         currentHealth -= damage;
         if (currentHealth < 0)
         {

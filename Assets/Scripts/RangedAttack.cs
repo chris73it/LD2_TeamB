@@ -31,6 +31,9 @@ public class RangedAttack : MonoBehaviour
 
     public void Shoot(RangedWeapons shootThis)
     {
+        if (target == null)
+            return;
+
         timeSinceActive = 0;
 
         shootThis.setClip(shootThis.clipCurrent - shootThis.bulletCount);

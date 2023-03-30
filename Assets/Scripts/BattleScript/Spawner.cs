@@ -21,18 +21,17 @@ public class Spawner : MonoBehaviour
     private float nextSpawnTime;
     private bool canSpawn = true;
     private bool canAnimate = false;
-    private int waiter = 5;
-    private int count = 0;
+    [SerializeField] int waiter;
+    private int count = -1;
 
     private void Start()
     {
-        Debug.Log("Started");
         StartCoroutine(Waiter());
     }
 
     private void Update()
     {
-        if (count == 5)
+        if (count == waiter)
         {
             currentWave = waves[currentWaveNumber];
             SpawnWave();
@@ -40,13 +39,16 @@ public class Spawner : MonoBehaviour
 
             if (totalEnemies.Length == 0)
             {
+                count = -1;
                 if (currentWaveNumber + 1 != waves.Length)
                 {
+                    SpawnNextWave();
+
                     if (canAnimate)
                     {
-                        waveName.text = waves[currentWaveNumber + 1].waveName;
-                        animator.SetTrigger("WaveComplete");
-                        canAnimate = false;
+                        //waveName.text = waves[currentWaveNumber + 1].waveName;
+                        //animator.SetTrigger("WaveComplete");
+                        //canAnimate = false;
                     }
                 }
                 else
@@ -61,23 +63,19 @@ public class Spawner : MonoBehaviour
     {
         currentWaveNumber++;
         canSpawn = true;
+        StartCoroutine(Waiter());
     }
     private IEnumerator Waiter()
     {
-        yield return new WaitForSeconds(5f);
-        for (int i = 0; i < waiter; i++)
-        {
-            count++;
-        }
+        yield return new WaitForSeconds(waiter);
+        count = waiter;
     }
     void SpawnWave()
     {
-        
-        if (!canSpawn || nextSpawnTime > Time.time)
+        if (!canSpawn || nextSpawnTime >= Time.time)
         {
             return;
         }
-        Debug.Log("Continuing Forward");
         float playingFieldWidth = corners[1].transform.position.x - corners[0].transform.position.x;
         float playingFieldHeight = corners[2].transform.position.y - corners[0].transform.position.y;
 
@@ -91,11 +89,15 @@ public class Spawner : MonoBehaviour
             GameObject randomEnemy = currentWave.typeOfEnemies[randomEnemyIndex]; //choose the enemies
 
             Instantiate(randomEnemy, enemyPosition, Quaternion.identity); // Spawn enemy
-            
-            nextSpawnTime = Time.time + currentWave.spawnInterval;
+            currentWave.noOfEnemies--;
+        
         }
-
-        canSpawn = false;
+        nextSpawnTime = Time.time + currentWave.spawnInterval;
+        if (currentWave.noOfEnemies == 0)
+        {
+            canSpawn = false;
+            canAnimate = true;
+        }
 
     }
 
