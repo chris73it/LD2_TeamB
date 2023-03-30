@@ -20,9 +20,30 @@ public class FinishLevel : MonoBehaviour
 
     void Update()
     {
+        //if (gameObject is finished)
+        //{
+        //    forestTransfer();
+        //}
+        //if (gameObjectElite is finished)
+        //{
+
+        //}
+    }
+
+    void forestTransfer()
+    {
+            if (waves.Length == 0)
+            {
+                ui.InteractLevel();
+            }
+        
+    }
+    void eliteTransfer()
+    {
         if (waves.Length == 0)
         {
             ui.InteractLevel();
         }
+
     }
 }
