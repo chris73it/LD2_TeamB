@@ -23,6 +23,7 @@ public class Spawner : MonoBehaviour
     private bool canAnimate = false;
     [SerializeField] int waiter;
     private int count = -1;
+    public bool finished = false;
 
     private void Start()
     {
@@ -54,6 +55,7 @@ public class Spawner : MonoBehaviour
                 else
                 {
                     Debug.Log("GameFinish");
+                    finished = true;
                 }
             }
         }
