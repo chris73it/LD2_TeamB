@@ -29,7 +29,7 @@ public class TroopSlotManager : MonoBehaviour
             }
         }
     }*/
-
+/*
     void Update()
     {
         if (input.horizontal != 0 || input.vertical != 0)
@@ -56,9 +56,11 @@ public class TroopSlotManager : MonoBehaviour
             
             //Debug.Log(filledSlots + " rotating");
 
+
+
             Vector3 polarPos = new Vector3(offset * (Mathf.Sin(angle * i)) + this.transform.position.x, offset * (Mathf.Cos(angle * i)) + this.transform.position.y, 0);
             children[i].position = polarPos;
         }
         
-    }
+    }*/
 }
