@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6305565637447514219}
   - component: {fileID: 7856060404907704764}
   - component: {fileID: 7706154858998594456}
+  - component: {fileID: 7732791835225949550}
   m_Layer: 0
   m_Name: TurretBoss
   m_TagString: Enemy
@@ -168,6 +169,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7732791835225949550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216867924536993577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5b742be61a8244f815798404e1f6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7388591605754567109
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471859660116816572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 1.57, z: 0}
+  m_LocalPosition: {x: 0.12, y: -1.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
