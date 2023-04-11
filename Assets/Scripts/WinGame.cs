@@ -5,8 +5,8 @@ using UnityEngine;
 public class WinGame : MonoBehaviour
 {
     public Character health;
-    private float hp;
     public GameObject canvas;
+    private float hp;
 
     void Update()
     {
