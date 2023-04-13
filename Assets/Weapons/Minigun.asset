@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfa6d5de32da1c49a85779b2ef2c530, type: 3}
   m_Name: Minigun
   m_EditorClassIdentifier: 
-  clipCurrent: 10
-  clipSize: 10
+  clipCurrent: -174
+  clipSize: 15
   bulletCount: 1
   bulletSpread: 0
-  bulletSpeed: 1
+  bulletSpeed: 15
   speedFallOff: 0
   projectileSprite: {fileID: 0}
-  useRate: 2
-  reloadTime: 15
+  useRate: 0.2
+  reloadTime: 5
   damage: 1

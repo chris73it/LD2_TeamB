@@ -19,6 +19,6 @@ MonoBehaviour:
   bulletSpeed: 1
   speedFallOff: 0
   projectileSprite: {fileID: 0}
-  useRate: 1
-  reloadTime: 4
-  damage: 3
+  useRate: 2
+  reloadTime: 7
+  damage: 2

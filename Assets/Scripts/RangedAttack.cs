@@ -10,7 +10,7 @@ public class RangedAttack : MonoBehaviour
     public Transform weaponTransform, gunTip, target;
 
     float timeSinceActive, reloadTime, reloadDelay;
-    bool reloading;
+    bool reloading = false;
     public bool canShoot;
 
     public void setTarget(Transform what)
@@ -20,6 +20,7 @@ public class RangedAttack : MonoBehaviour
 
     private void Update()
     {
+        UseActive();
         Reload();
         timeSinceActive += Time.deltaTime;
 
@@ -27,6 +28,14 @@ public class RangedAttack : MonoBehaviour
         {
             Shoot(activeItem);
         }
+    }
+    void UseActive()
+    {
+        if (timeSinceActive < 3) timeSinceActive += Time.deltaTime;
+
+            if (activeItem.clipCurrent == 0 && !reloading) { reloadTime = 0; reloading = true; }
+            if (timeSinceActive > (activeItem.useRate) && activeItem.clipCurrent > 0 && !reloading) Shoot(activeItem);
+        
     }
 
     public void Shoot(RangedWeapons shootThis)
@@ -57,22 +66,20 @@ public class RangedAttack : MonoBehaviour
     void Reload()
     {
         //reloadScript.reloading = reloading;
-        //if (input.reload && activeItem != null && !reloading)
-        //{
-        if (activeItem.clipCurrent < activeItem.clipSize)
+        if (activeItem != null && !reloading)
         {
-            reloadTime = 0;
-            reloading = true;
+            if (activeItem.clipCurrent < activeItem.clipSize)
+            {
+                reloadTime = 0;
+                reloading = true;
+            }
         }
-        //}
         if (reloading)
         {
             reloadDelay = activeItem.reloadTime;
-            if (activeItem.clipCurrent > 0) reloadDelay -= 0.5f;
-            reloadTime += Time.deltaTime;
-
-            //reloadSlider.maxValue = reloadDelay;
-            //reloadSlider.value = reloadTime;
+            if (activeItem.clipCurrent > 0) 
+                reloadDelay -= 0.5f;
+                reloadTime += Time.deltaTime;
 
             if (reloadTime > reloadDelay)
             {
@@ -85,7 +92,7 @@ public class RangedAttack : MonoBehaviour
                     activeItem.setClip(activeItem.clipSize);
                 }
                 reloading = false;
-                //reloadSlider.value = 0;
+
             }
         }
     }
