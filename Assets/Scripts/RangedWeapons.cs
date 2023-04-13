@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/RangedWeapons")]
 public class RangedWeapons : ScriptableObject
 {
-    public int MagCurrent;
-    public int MagSize;
+    public int clipCurrent;
+    public int clipSize;
 
     public int bulletCount;
     public int bulletSpread;
@@ -21,6 +21,6 @@ public class RangedWeapons : ScriptableObject
 
     public void setClip(int what)
     {
-        MagCurrent = what;
+        clipCurrent = what;
     }
 }
