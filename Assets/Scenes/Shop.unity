@@ -537,6 +537,8 @@ MonoBehaviour:
   troop1: {fileID: 635008015}
   troop2: {fileID: 912623061}
   troop3: {fileID: 550018502}
+  draggableTroop: {fileID: 926252162520128740, guid: af18a0f5ac0ce6f4c91daa318bdd9f90, type: 3}
+  canvas: {fileID: 1612346731}
 --- !u!1 &172655854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6281919236602843050, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
@@ -1069,96 +1071,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7606362221836144983, guid: eb9998e58e3ecbb41bb10ed0e5589871, type: 3}
   m_PrefabInstance: {fileID: 267231286}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &322701365
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 322701366}
-  - component: {fileID: 322701369}
-  - component: {fileID: 322701368}
-  - component: {fileID: 322701367}
-  m_Layer: 5
-  m_Name: draggableItem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &322701366
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322701365}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 911928234}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 140.18}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &322701367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322701365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ddd8dd467c9e54a89af5f4f58552c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nearestSlot: {fileID: 0}
---- !u!114 &322701368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322701365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 96c9f809b3784e84fb2ab2ba9f03f58f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &322701369
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322701365}
-  m_CullTransparentMesh: 1
 --- !u!1 &337989599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1039116698869627713, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
@@ -3553,7 +3465,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 661133478}
-  - {fileID: 322701366}
   m_Father: {fileID: 1612346735}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7299,6 +7210,10 @@ PrefabInstance:
     - target: {fileID: 1887151895919721033, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
       propertyPath: m_TagString
       value: inv
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116244306223427934, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
+      propertyPath: m_TagString
+      value: active
       objectReference: {fileID: 0}
     - target: {fileID: 2616752465559831676, guid: 5889774169c0f4b40a5f32f0feccc1b7, type: 3}
       propertyPath: m_TagString
