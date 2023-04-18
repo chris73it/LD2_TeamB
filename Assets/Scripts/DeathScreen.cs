@@ -18,6 +18,7 @@ public class DeathScreen : MonoBehaviour
     }
     private void death()
     {
+        Debug.Log("death");
         if (health == 0)
         {
             Death.gameObject.SetActive(true);

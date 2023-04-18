@@ -87,6 +87,7 @@ MonoBehaviour:
   Bow: {fileID: 6305565637447514219}
   range: 40
   distance: 0
+  Type: 0
 --- !u!114 &2385876157294524980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeItem: {fileID: 11400000, guid: 072c288c823c41c439bcefe7562ac09a, type: 2}
-  projectilePrefab: {fileID: 2743284458218944140, guid: 94497706fc0b3ad4d93cafa2b1aa00a9, type: 3}
+  projectilePrefab: {fileID: 2743284458218944140, guid: 49eda0c3382990b418f429590e73005f, type: 3}
   weaponTransform: {fileID: 2122967390606340853}
   gunTip: {fileID: 5054311027703602731}
   target: {fileID: 0}

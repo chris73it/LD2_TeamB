@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
+
     public MeleeEnemies chase;
     public Melee melee;
     public int damage;
@@ -37,8 +38,10 @@ public class MeleeAttack : MonoBehaviour
 
     void Animation()
     {
-        Vector2 dir = (player.transform.position - transform.position).normalized;
-        float angle = -1 * Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; //find angle in degrees from enemy to player
-        weaponTransform.rotation = Quaternion.AngleAxis(angle, Vector3.back);
+        if (player != null) {
+            Vector2 dir = (player.transform.position - transform.position).normalized;
+            float angle = -1 * Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; //find angle in degrees from enemy to player
+            weaponTransform.rotation = Quaternion.AngleAxis(angle, Vector3.back);
+        }
     }
 }
