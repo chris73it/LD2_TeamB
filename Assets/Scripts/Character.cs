@@ -52,6 +52,7 @@ public class Character : MonoBehaviour
     {
         if (Type == CharacterType.Player)
         {
+            //Destroy(this.gameObject);
             //handle player death
         }
         else
